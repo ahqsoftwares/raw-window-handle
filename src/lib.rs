@@ -31,17 +31,17 @@ extern crate alloc;
 #[cfg(feature = "std")]
 extern crate std;
 
-mod android;
-mod appkit;
+pub mod android;
+pub mod appkit;
 #[cfg(any(feature = "std", not(target_os = "android")))]
 #[cfg_attr(docsrs, doc(cfg(any(feature = "std", not(target_os = "android")))))]
-mod borrowed;
-mod haiku;
-mod redox;
-mod uikit;
-mod unix;
-mod web;
-mod windows;
+pub mod borrowed;
+pub mod haiku;
+pub mod redox;
+pub mod uikit;
+pub mod unix;
+pub mod web;
+pub mod windows;
 
 pub use android::{AndroidDisplayHandle, AndroidNdkWindowHandle};
 pub use appkit::{AppKitDisplayHandle, AppKitWindowHandle};
