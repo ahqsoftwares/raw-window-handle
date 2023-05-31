@@ -31,6 +31,8 @@ extern crate alloc;
 #[cfg(feature = "std")]
 extern crate std;
 
+/// Now the modules are public again
+
 pub mod android;
 pub mod appkit;
 #[cfg(any(feature = "std", not(target_os = "android")))]
